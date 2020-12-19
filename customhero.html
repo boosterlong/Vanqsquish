@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts.js"></script> 
+    </head>
+<body>
+    <html>    
+        <h1>Create your hero:</h1>
+        <input type="text" placeholder ="Hero Name" id="userinput">
+        <br><br>
+        <form>
+            <input type="radio" id='class' name="class" value="Assassin">
+            <label for="assassin">Assassin</label><br>
+            <input type="radio" id='class' name="class" value="Barbarian">
+            <label for="barbarian">Barbarian</label><br>
+          </form> 
+        <br>
+        <br><br>
+        <button type="submit" onclick="myfunc()" id="demo">Venture Forth</button>
+    
+        <script type="text/javascript">
+            function myfunc() {
+                var input = document.getElementById('userinput');
+                var input2 = document.getElementById('class')
+                alert(input.value + ' the ' + input2.value);
+            } 
+        </script>
+    </html>
+    
+
+</body>
+</html> 
