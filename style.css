@@ -29,6 +29,9 @@ button {
 label {
     display:inline-flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    padding: 8px;
+    margin: 5px;
 }
 
  input {
