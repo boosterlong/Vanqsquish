@@ -19,8 +19,17 @@ function toggleText() {
 
   //Attack the bug by generating a random damage number and comparing it to enemy health
   function attackBug() {
+    //Rolls d10 damage
     let damage = Math.floor(Math.random() * 10 + 1);
-    alert((localStorage.getItem('heroName')) + " fights the enemy and does " + damage + " damage!");
+
+    if ((localStorage.getItem('heroName').includes('Barbarian'))) {
+      alert('Your great maul slams downwards!')
+    }
+    else {
+      alert('Your throwing dagger finds the target!')
+    }
+
+    alert((localStorage.getItem('heroName')) + " attacks the enemy and does " + damage + " damage!");
   if ((localStorage.getItem('enemyHP')) < damage) {
     resolveBattle();}
     else {
