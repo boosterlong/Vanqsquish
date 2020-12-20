@@ -2,7 +2,7 @@
 <html>
     <head>
     <link rel="stylesheet" href="style.css">
-    <script src="/scripts.js"></script> 
+    <script src="./scripts.js"></script> 
     </head>
 <body>
     <html>    
@@ -16,18 +16,20 @@
             <label for="role">Barbarian</label><br>
           </form> 
         <br>
-        <br><br>
 
-        <button type="submit" onclick="myfunc()" id="">Venture Forth</button>
+        <button type="submit" onclick="createHero(),toggleText()" id="">Create Hero</button>
     
-        <script type="text/javascript">
-            function myfunc() {
-                var input = document.getElementById('userinput');
-                var input2 = document.querySelector('input[name="option"]:checked');
-                alert(input.value + ' the ' + input2.value);
-            } 
-            
-        </script>
+        <div id='adventure' style='display: none'>
+
+
+        <p>You encounter an incredibly mean bug!<br>
+            <img src="./bug.png" height="200px"><br>
+        </p>
+        <button onclick="attackBug()">Attack!</button> 
+        
+        
+        </div>     
+
     </html>
     
 
