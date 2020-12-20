@@ -33,5 +33,9 @@ label {
 
  input {
      display: inline-flexbox;
+     border-radius: 50px;
+     padding: 10px;
+     font-size: 30px;
+     text-align: center;
 }
 
