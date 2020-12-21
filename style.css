@@ -5,14 +5,23 @@ body {
     padding-top: 10%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-a {
+.createCharacter {
     color: rgb(46, 0, 59);
-    border: 2mm groove rgb(240, 181, 255);
+    border: 2mm outset rgb(240, 181, 255);
     text-decoration: none;
     padding: 20px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(220, 252, 250);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
+
+.createCharacter:active {
+    border: 2mm inset rgb(240, 181, 255);
+}
+
 
 button {
     background-color:rgb(46, 0, 59);
@@ -40,5 +49,48 @@ label {
      padding: 10px;
      font-size: 30px;
      text-align: center;
+}
+
+/* Styles below are for modals*/
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 

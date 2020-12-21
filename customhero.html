@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <link rel="stylesheet" href="style.css">
     <script src="./scripts.js"></script> 
+    <link rel="stylesheet" href="style.css">
     </head>
 <body>
-    <html>    
+    <html> 
+        
         <h1>Create your hero:</h1>
         <input type="text" placeholder ="Hero Name" id="userinput">
         <br><br>
@@ -17,8 +18,13 @@
           </form> 
         <br>
 
-        <button type="submit" onclick="createHero(),toggleText()" id="">Create Hero</button>
-    
+        <button  class="trigger" type="submit" onclick="createHero(),toggleText()" id="">Create Hero</button>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h1><script>document.write(localStorage.getItem('heroName'))</script> has been recruited!</h1>
+            </div>
+        </div>
         <div id='adventure' style='display: none'>
 
 
@@ -29,7 +35,7 @@
 
 
         <button onclick="attackBug()">Attack!</button> 
-        
+
         
         </div>     
 
@@ -38,3 +44,6 @@
 
 </body>
 </html> 
+
+<!--I can't get this to work without putting it at the bottom of this page --> 
+<script src="./modal.js"></script>

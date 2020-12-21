@@ -5,8 +5,7 @@ function createHero() {
     var input2 = document.querySelector('input[name="option"]:checked');
     let hero = (input.value + ' the ' + input2.value);
 //Saves hero title and name
-    localStorage.setItem('heroName', hero)
-    alert(hero + " has been born!")
+    localStorage.setItem('heroName', hero);
 } 
 
 //This is the function to show the enemy, used in createHero()
@@ -19,8 +18,8 @@ function toggleText() {
 
   //Attack the bug by generating a random damage number and comparing it to enemy health
   function attackBug() {
-    //Rolls d10 damage
-    let damage = Math.floor(Math.random() * 10 + 1);
+    //Rolls d10+1 damage
+    let damage = Math.floor(Math.random() * 10 + 2);
 
     if ((localStorage.getItem('heroName').includes('Barbarian'))) {
       alert('Your great maul slams downwards!')
@@ -41,8 +40,8 @@ function resolveBattle() {
     window.location.href = "./victory.html"
 }
 
-function backToMain() {
-    window.location.href = "./customhero.html"
+function backToMain() {    
+    window.location.href = "./index.html"
 }
 
 function recallName() {
@@ -55,3 +54,5 @@ function enemyPool() {
   localStorage.setItem('enemyHP', health)
   document.write(localStorage.getItem('enemyHP'))
 }
+
+
